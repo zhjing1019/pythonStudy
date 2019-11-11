@@ -51,6 +51,29 @@ else:
     print("输入其他的数字")
 
 # 循环
+# while循环
+n = 0
+while n < 11:
+    print(n)
+    n += 1
+
+# 打印斐波那契数列
+a, b = 0, 1
+while b < 100:
+    print(b)
+    a, b = b, a + b
+
+# 打印10以内的乘法表
+i = 1
+print("-" * 50)
+while i < 11:
+    n  = 1
+    while n <= 10:
+        print("{:5d}".format(i * n), end = '')
+        n += 1
+    print()
+    i +=1
+print("-" * 50)
 
 
 
