@@ -1,18 +1,18 @@
-# # 单行定义多个变量或赋值
-# a, b = 1, 2
+# 单行定义多个变量或赋值
+a, b = 1, 2
 
-# # 交换俩个值的数值
-# a, b = b, a
+# 交换俩个值的数值
+a, b = b, a
 
-# # 单行定义多个变量或赋值可用于元组拆分
-# data = ('test1', 'test2', 'test3')
-# nameOne, nameTwo, nameThree = data
-# print(nameOne)
-# # test1
-# print(nameTwo)
-# # test2
-# print(nameThree)
-# # test3
+# 单行定义多个变量或赋值可用于元组拆分
+data = ('test1', 'test2', 'test3')
+nameOne, nameTwo, nameThree = data
+print(nameOne)
+# test1
+print(nameTwo)
+# test2
+print(nameThree)
+# test3
 
 
 # 计算一位数码相机销售人员的工资。他的基本工资是 1500，每售出一台相机他可以得到 200 并且获得 2% 的抽成。程序要求输入相机数量及单价。
