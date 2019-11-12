@@ -1,28 +1,28 @@
-# 单行定义多个变量或赋值
-a, b = 1, 2
+# # 单行定义多个变量或赋值
+# a, b = 1, 2
 
-# 交换俩个值的数值
-a, b = b, a
+# # 交换俩个值的数值
+# a, b = b, a
 
-# 单行定义多个变量或赋值可用于元组拆分
-data = ('test1', 'test2', 'test3')
-nameOne, nameTwo, nameThree = data
-print(nameOne)
-# test1
-print(nameTwo)
-# test2
-print(nameThree)
-# test3
+# # 单行定义多个变量或赋值可用于元组拆分
+# data = ('test1', 'test2', 'test3')
+# nameOne, nameTwo, nameThree = data
+# print(nameOne)
+# # test1
+# print(nameTwo)
+# # test2
+# print(nameThree)
+# # test3
 
 
-# 计算一位数码相机销售人员的工资。他的基本工资是 1500，每售出一台相机他可以得到 200 并且获得 2% 的抽成。程序要求输入相机数量及单价。
-base_salary = 1500
-get_rate = 200
-precent_rate = 0.02
-count = int(input("请输入相机的数量"))
-price= int(input("请输入相机的单价"))
-all_salary = base_salary + get_rate * count + precent_rate * count * price
-print(all_salary)
+# # 计算一位数码相机销售人员的工资。他的基本工资是 1500，每售出一台相机他可以得到 200 并且获得 2% 的抽成。程序要求输入相机数量及单价。
+# base_salary = 1500
+# get_rate = 200
+# precent_rate = 0.02
+# count = int(input("请输入相机的数量"))
+# price= int(input("请输入相机的单价"))
+# all_salary = base_salary + get_rate * count + precent_rate * count * price
+# print(all_salary)
 
 
 #if elif else 的基本语法结构。
@@ -88,3 +88,22 @@ b = a + [3, 4, 5, 6, 7]
 print(b)
 b[3] = 64  #可以直接修改列表
 b[1:3] = [111, 222, 333]   #可以直接切片赋值
+
+# for循环
+# for 循环遍历任何序列（比如列表和字符串）中的每一个元素
+a = ['test1', 'test2', 'test3']
+for x in a:
+    print(x) 
+
+for x in a[1:2]:
+    print(x) 
+
+# range函数
+for i in range(5):
+    print(i) #1,2,3,4,5
+
+a = list(range(1, 5))
+print(a)   #[1, 2, 3, 4]
+
+b = list(range(1, 15, 3))
+print(b)   #[1, 4, 7, 10, 13]
