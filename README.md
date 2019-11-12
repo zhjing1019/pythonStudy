@@ -188,6 +188,54 @@ del a[1]            #删除指定位置的元素
 ``` 
 
 #### 将列表用作栈和队列
+```
+# 将列表用作栈和队列
+
+b = [1, 2, 3, 4, 5]
+# pop(i), 会讲第i个元素弹出
+b.pop(2)            #3
+print(b)            #[1, 2, 4, 5]
+``` 
+
+#### 列表推导
+```
+# 列表推导
+#  for 循环中的被创建（或被重写）的名为 x 的变量在循环完毕后依然存在
+squares = []
+for x in range(10):
+    squares.append(x ** 2)
+print(squares)         #[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+# 等价于
+squares = list(map(lambda x: x ** 2, range(10)))
+print(squares)          #[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+# 等价于
+squares = [x ** 2 for x in range(10)]
+print(squares)          #[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+
+# 例如
+combs = []
+for x in [1, 3, 4]:
+    for y in [2, 4, 6]:
+        if x != y:
+            combs.append((x, y))
+print(combs)
+
+# 等价于
+combs = [(x, y) for x in [1, 3, 4] for y in [2, 4, 6] if x != y]
+print(combs)
+
+# 列表推导式也可以嵌套
+a = [1, 2, 3]
+z = [x + 1 for x in [x ** 2 for x in a]]
+
+``` 
+
+# 元组
+
+
 
 
 
