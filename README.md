@@ -233,10 +233,28 @@ z = [x + 1 for x in [x ** 2 for x in a]]
 
 ``` 
 
+#### 元组
+元组是由数个逗号分割的值组成, 元组是不可变类型，这意味着你不能在元组内删除或添加或编辑任何值
+```
 # 元组
+# 元组是由数个逗号分割的值组成
+# 元组是不可变类型，这意味着你不能在元组内删除或添加或编辑任何值
+a = 'test1', 'test2', 'test3', 'test4'
+print(a)        #('test1', 'test2', 'test3', 'test4')
+print(a[1])     #test2
 
+# 要创建只含有一个元素的元组，在值后面跟一个逗号。
+a = (123)
+print(a)        #123
+print(type(a))  #<class 'int'>
+a = (123, )
+print(a)        #(123, )
+print(type(a))  #<class 'tuple'>
+b = 321,
+print(b)        #(321, )
+print(type(b))  #<class 'tuple'>
+```  
 
-
-
+#### 集合
 
 
