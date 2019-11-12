@@ -107,3 +107,22 @@ print(a)   #[1, 2, 3, 4]
 
 b = list(range(1, 15, 3))
 print(b)   #[1, 4, 7, 10, 13]
+
+# continue，break语句
+# break跳出循环 ，continue它会跳过其后的代码回到循环开始处执行。
+
+# 我们要求用户输入一个整数，如果输入的是负数，那么我们会再次要求输入，如果输入的是整数，我们计算这个数的平方。用户输入 0 来跳出这个无限循环。
+while True:
+    n = int(input("input a number"))
+    if n < 0:
+        continue  #会返回到开始处执行
+    elif n == 0:
+        break     #跳出循环
+    else:
+        print("square is", n ** 2)
+
+# 循环的else语句（循环结束后执行）
+for i in range(1, 5):
+    print(i)
+else:
+    print('end')
