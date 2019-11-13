@@ -256,5 +256,35 @@ print(type(b))  #<class 'tuple'>
 ```  
 
 #### 集合
+大括号或 set() 函数可以用来创建集合。注意：想要创建空集合，你必须使用 set() 而不是 {}。  
+集合对象还支持 union（联合），intersection（交），difference（差）和 symmetric difference（对称差集）等数学运算。 
+集合是一个无序不重复元素的集。基本功能包括关系测试和消除重复元素。 
+```
+# 集合
+# 大括号或 set() 函数可以用来创建集合。注意：想要创建空集合，你必须使用 set() 而不是 {}。  
+# 集合对象还支持 union（联合），intersection（交），difference（差）和 symmetric difference（对称差集）等数学运算。 
+# 集合是一个无序不重复元素的集。基本功能包括关系测试和消除重复元素。
+
+test = {'pink', 'red', 'green', 'white'}
+print(type(test))       # <class 'set'>
+print('pink' in test)   # True
+print('blank' in test)  # False
+
+# 对俩个单词中的字母进行集合操作
+a = set('abcdefghijk')
+b = set('hijkmlnopq')
+# a中集合减去b中集合（在a集合中去掉和b相同的元素）
+print(a - b)            # {'g', 'f', 'e', 'a', 'c', 'b', 'd'}
+# a和b集合的合并
+print(a | b)            # {'e', 'l', 'o', 'g', 'd', 'q', 'i', 'b', 'c', 'h', 'n', 'k', 'm', 'f', 'p', 'j', 'a'}
+# a集合和b集合的并集
+print(a & b)            # {'i', 'h', 'j', 'k'}
+# 去掉a集合和b集合的并集，并合并a集合和b集合
+print(a ^ b)            # {'e', 'l', 'n', 'm', 'o', 'g', 'f', 'p', 'q', 'd', 'a', 'b', 'c'}
+# 从集合中添加或者弹出集合
+print(a.pop())          # g
+a.add('l')       
+print(a)                # {'c', 'g', 'i', 'd', 'e', 'f', 'a', 'j', 'k', 'l', 'b'}
+``` 
 
 
