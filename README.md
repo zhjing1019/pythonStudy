@@ -184,6 +184,14 @@ a.sort()            #给列表排序
 print(a)            #[1, 2, 4, 14, 45, 111, 125, 321, 456]
 #删除指定位置的元素
 del a[1]            #删除指定位置的元素
+#遍历列表的时候，获得列表的索引值enumerate()
+for i, j in enumerate(['test1', 'test2']):
+    print("{} in {}".format(i, j))
+#同时遍历俩个序列，zip()
+a = ['test1', 'test2']
+b = ['test3', 'test4']
+for x, y in zip(a, b):
+    print("{} in {}".format(i, j))
 
 ``` 
 
@@ -286,5 +294,44 @@ print(a.pop())          # g
 a.add('l')       
 print(a)                # {'c', 'g', 'i', 'd', 'e', 'f', 'a', 'j', 'k', 'l', 'b'}
 ``` 
+
+#### 字典
+字典是是无序的键值对（key:value）集合，同一个字典内的键必须是互不相同的。一对大括号 {} 创建一个空字典。初始化字典时，在大括号内放置一组逗号分隔的键：值对，这也是字典输出的方式。我们使用键来检索存储在字典中的数据。
+
+```
+# 字典是是无序的键值对（key:value）集合，同一个字典内的键必须是互不相同的。
+# 一对大括号 {} 创建一个空字典。初始化字典时，在大括号内放置一组逗号分隔的键：值对，这也是字典输出的方式。我们使用键来检索存储在字典中的数据。
+data = {"one": 'test1', "two": "test2", "three": "test3"}
+print(data['one'])          #test1
+# 创建新的键值对
+data['four'] = 'test4'
+# 使用 del 关键字删除任意指定的键值对
+del data['two']
+print(data)                 #{'one': 'test1', 'three': 'test3', 'four': 'test4'}
+# 字典中的键必须是不可变类型，比如你不能使用列表作为键。
+
+# dict() 可以从包含键值对的元组中创建字典。
+b = dict((('one', 'test1'), ('two', 'test2')))
+print(b)                    #{'one': 'test1', 'two': 'test2'}
+# items()遍历字典
+for x, y in data.items():
+    print("{} use {}".format(x, y)) #one use test1   three use test3   four use test4
+
+# dict.setdefault(key, default)
+# 往字典里添加数据时，先判断字典里是否存在这个元素，不存在则创建一个默认值
+data = {}
+data.setdefault('name', []).append('Ruby')
+print(data)         # {'name': ['Ruby']}
+data.setdefault('name', []).append('python')
+print(data)         # {'name': ['Ruby', 'python']}
+
+# 试图索引一个不存在的键将会抛出一个 keyError 错误。我们可以使用 dict.get(key, default) 来索引键，如果键不存在，那么返回指定的 default 值。
+print(data['foo'])  # KeyError: 'foo'
+
+``` 
+
+
+
+
 
 
