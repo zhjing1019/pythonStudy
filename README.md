@@ -355,7 +355,22 @@ print("""\
 
 #### 字符串的方法
 ```
-
+# 字符串的方法
+# 方法 title() 返回字符串的标题版本，即单词首字母大写其余字母小写。
+s = "hello world"
+print(s.title())    # Hello World
+# 方法 upper() 返回字符串全部大写的版本，反之 lower() 返回字符串的全部小写版本。
+print(s.upper())    # HELLO WORLD
+print(s.lower())    # hello world
+# 方法 isalnum() 检查所有字符是否只有字母和数字
+print(s.isalnum())  # False
+# 方法 isalpha() 检查字符串之中是否只有字母。
+print(s.isalpha())  #False
+# split() 分割任意字符串，split() 允许有一个参数，用来指定字符串以什么字符分隔（默认为 " "），它返回一个包含所有分割后的字符串的列表。
+print(s.split('l')) # ['he', '', 'o wor', 'd']
+# 方法 join() 使用指定字符连接多个字符串
+l = "_".join(s.split('l'))
+print(l)            # he__o wor_d
 ``` 
 
 
