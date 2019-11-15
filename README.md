@@ -330,6 +330,38 @@ print(data['foo'])  # KeyError: 'foo'
 
 ``` 
 
+# 字符串 
+#### 字符串的表示
+可以通过几种不同的方式表示字符串。如单引号（'...'）或双引号（"..."）
+```
+# 字符串的表示
+# 可以通过几种不同的方式表示字符串。如单引号（'...'）或双引号（"..."）
+h = "hello world"
+s = "Here is a line \
+... split in two lines"
+print(s)            # Here is a line ... split in two lines
+s = "here is a line \n split in two lines"  # \n 表示换行
+print(s)            
+#here is a line 
+# split in two lines
+
+# 分几行输入字符串，并且希望行尾的换行符自动包含到字符串当中，可以使用三对引号："""...""" 或 '''...''' 。
+print("""\
+... Usage: thingy [OPTIONS]
+...      -h                        Display this usage message
+...      -H hostname               Hostname to connect to
+... """)
+``` 
+
+#### 字符串的方法
+```
+
+``` 
+
+
+
+
+
 
 
 
