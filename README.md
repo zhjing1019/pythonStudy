@@ -385,7 +385,7 @@ print(s.lstrip('ws.'))  # foss.in   删除字符串左边出现的w s .
 print(s.rstrip('n.'))   # www.foss.i    删除字符串右边出现的n .
 ``` 
 
-# 文本搜索
+#### 文本搜索
 ```
 s = "faulty for a reason"
 print(s.find("for"))    //7
@@ -393,13 +393,10 @@ print(s.find("for"))    //7
 print(s.startswith("fa"))
 # 检查是否一reason结尾
 print(s.endswith("reason"))
+
 ```
 
-
-
-
-
-
+#### python函数
 
 
 
