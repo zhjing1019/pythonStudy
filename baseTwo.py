@@ -180,3 +180,12 @@ print(s.split('l')) # ['he', '', 'o wor', 'd']
 # 方法 join() 使用指定字符连接多个字符串
 l = "_".join(s.split('l'))
 print(l)            # he__o wor_d
+
+# 字符串的剥离
+# strip(chars)，用来剥离字符串首尾中指定的字符，它允许有一个字符串参数，这个参数为剥离哪些字符提供依据。
+# 你可以使用 lstrip(chars) 或 rstrip(chars) 只对字符串左或右剥离。
+s = "   a bc\n"
+print(s.strip())        # a bc
+s = "www.foss.in"
+print(s.lstrip('ws.'))  # foss.in   删除字符串左边出现的w s .
+print(s.rstrip('n.'))   # www.foss.i    删除字符串右边出现的n .
