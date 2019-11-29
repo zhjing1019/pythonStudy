@@ -461,3 +461,31 @@ print("After the function call ", a)
 
 #### 默认参数值
 函数的参数变量可以有默认值，也就是说如果我们对指定的参数变量没有给出任何值则会赋其默认值。
+```
+# 默认参数值
+# 调用者未给出 b 的值，那么 b 的值默认为 99
+def test(a, b = 99):
+    if a > b:
+        return True
+    else:
+        return False
+print(test(1000))
+print(test(20))
+
+# 是具有默认值的参数后面不能再有普通参数，比如 f(a,b=90,c) 就是错误的。
+# 默认值只被赋值一次，因此如果默认值是任何可变对象时会有所不同
+def f(a, b = []):
+    b.append(a)
+    return b
+print(f(1))     #[1]
+print(f(2))     #[1, 2]
+
+def f(a, data = []):
+    if data is None:
+        data = []
+    data.append(a)
+    return data
+print(f(1))     #[1]
+print(f(2))     #[1, 2]
+print(f(4, [])) #[4]
+```
