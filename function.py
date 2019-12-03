@@ -124,16 +124,27 @@
 # f.write('测试1\n')  #io.UnsupportedOperation: not writable
 # f.write('ceshi2\n') #io.UnsupportedOperation: not writable
 
-# 拷贝文件
-#!/usr/bin/env python3
+# # 拷贝文件
+# import sys
+# if len(sys.argv) < 3:
+#     print("Wrong parameter")
+#     print("./copyfile.py file1 file2")
+#     sys.exit(1)
+# f1 = open(sys.argv[1])
+# s = f1.read()
+# f1.close()
+# f2 = open(sys.argv[2], 'w')
+# f2.write(s)
+# f2.close()
+
+# 文本文件相关信息统计
+import os
 import sys
-if len(sys.argv) < 3:
-    print("Wrong parameter")
-    print("./copyfile.py file1 file2")
-    sys.exit(1)
-f1 = open(sys.argv[1])
-s = f1.read()
-f1.close()
-f2 = open(sys.argv[2], 'w')
-f2.write(s)
-f2.close()
+def parse_file(path):
+    ""
+    分析给定文本文件，返回其空格、制表符、行的相关信息
+
+    :arg path: 要分析的文本文件的路径
+
+    :return: 包含空格数、制表符数、行数的元组
+    ""
